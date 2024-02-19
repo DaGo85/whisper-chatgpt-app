@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
-import "./login.css";
 
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
@@ -38,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <section>
+    <section className="d-flex justify-content-center align-items-center vh-100">
       <Card>
         <Card.Body>
           <div>

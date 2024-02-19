@@ -60,6 +60,8 @@ const Register = () => {
               <Form.Group>
                 <Form.Label>Email: </Form.Label>
                 <Form.Control id="email" type="email" ref={emailRef} required />
+              </Form.Group>
+              <Form.Group>
                 <Form.Label>Password:</Form.Label>
                 <Form.Control
                   id="password"
@@ -67,6 +69,8 @@ const Register = () => {
                   ref={passwordRef}
                   required
                 />
+              </Form.Group>
+              <Form.Group>
                 <Form.Label>Confirm Password:</Form.Label>
                 <Form.Control
                   id="confirm-password"
@@ -74,30 +78,26 @@ const Register = () => {
                   ref={confirmPasswordRef}
                   required
                 />
-                {errorMsg && (
-                  <Alert
-                    variant="danger"
-                    onClose={() => setErrorMsg("")}
-                    dismissible
-                  >
-                    {errorMsg}
-                  </Alert>
-                )}
-                {msg && (
-                  <Alert
-                    variant="success"
-                    onClose={() => setMsg("")}
-                    dismissible
-                  >
-                    {msg}
-                  </Alert>
-                )}
-                <div>
-                  <Button variant="primary" disabled={loading} type="submit">
-                    Register
-                  </Button>
-                </div>
               </Form.Group>
+              {errorMsg && (
+                <Alert
+                  variant="danger"
+                  onClose={() => setErrorMsg("")}
+                  dismissible
+                >
+                  {errorMsg}
+                </Alert>
+              )}
+              {msg && (
+                <Alert variant="success" onClose={() => setMsg("")} dismissible>
+                  {msg}
+                </Alert>
+              )}
+              <div>
+                <Button variant="primary" disabled={loading} type="submit">
+                  Register
+                </Button>
+              </div>
             </Form>
           </div>
           <div>

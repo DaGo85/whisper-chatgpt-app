@@ -53,6 +53,8 @@ const UpdatePassword = () => {
                   ref={passwordRef}
                   required
                 />
+              </Form.Group>
+              <Form.Group>
                 <Form.Label>Confirm Password:</Form.Label>
                 <Form.Control
                   id="confirm-password"
@@ -60,17 +62,17 @@ const UpdatePassword = () => {
                   ref={confirmPasswordRef}
                   required
                 />
-                {errorMsg && (
-                  <Alert variant="danger" onClose={setErrorMsg} dismissible>
-                    {errorMsg}
-                  </Alert>
-                )}
-                <div>
-                  <Button variant="primary" disabled={loading} type="submit">
-                    Update
-                  </Button>
-                </div>
               </Form.Group>
+              {errorMsg && (
+                <Alert variant="danger" onClose={setErrorMsg} dismissible>
+                  {errorMsg}
+                </Alert>
+              )}
+              <div>
+                <Button variant="primary" disabled={loading} type="submit">
+                  Update
+                </Button>
+              </div>
             </Form>
           </div>
         </Card.Body>

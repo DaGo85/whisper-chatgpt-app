@@ -37,21 +37,17 @@ const PasswordReset = () => {
               <Form.Group>
                 <Form.Label>Email:</Form.Label>
                 <Form.Control id="email" type="email" ref={emailRef} required />
-                {msg && (
-                  <Alert
-                    variant="success"
-                    onClose={() => setMsg("")}
-                    dismissible
-                  >
-                    {msg}
-                  </Alert>
-                )}
-                <div>
-                  <Button variant="primary" disabled={loading} type="submit">
-                    Send Reset Link
-                  </Button>
-                </div>
               </Form.Group>
+              {msg && (
+                <Alert variant="success" onClose={() => setMsg("")} dismissible>
+                  {msg}
+                </Alert>
+              )}
+              <div>
+                <Button variant="primary" disabled={loading} type="submit">
+                  Send Reset Link
+                </Button>
+              </div>
             </Form>
           </div>
           <div>
