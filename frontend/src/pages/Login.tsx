@@ -11,7 +11,7 @@ import Alert from "react-bootstrap/Alert";
 const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const [errorMsg, setErrorMsg] = useState("test");
+  const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
@@ -68,7 +68,7 @@ const Login = () => {
                   onClose={() => setErrorMsg("")}
                   dismissible
                 >
-                  ErrorMessage
+                  {errorMsg}
                 </Alert>
               )}
               <div>
@@ -80,10 +80,15 @@ const Login = () => {
           </div>
           <div>
             Forgot Password?{" "}
-            <Card.Link href={"/passwordreset"}>Click Here</Card.Link>
+            <Card.Link as={Link} to={"/passwordreset"}>
+              Click Here
+            </Card.Link>
           </div>
           <div>
-            New User? <Card.Link href={"/register"}>Register</Card.Link>
+            New User?{" "}
+            <Card.Link as={Link} to={"/register"}>
+              Register
+            </Card.Link>
           </div>
         </Card.Body>
       </Card>
