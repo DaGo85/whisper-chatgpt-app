@@ -14,7 +14,7 @@ const testimonialsData = [
       "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
   },
   {
-    id: 2,
+    id: 3,
     name: "Dan Smith",
     role: "CTO, XYZ Inc.",
     comment:
