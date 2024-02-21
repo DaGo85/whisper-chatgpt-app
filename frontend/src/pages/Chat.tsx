@@ -20,7 +20,7 @@ function Chat() {
   return (
     <section data-bs-theme={darkMode}>
       <SideBar isSidebarOpen={isSidebarOpen} />
-      <Button variant="error" onClick={toggleSidebar}>
+      <Button variant="success" onClick={toggleSidebar}>
         toggle sidebar
       </Button>
       <h1>React Media Recorder</h1>

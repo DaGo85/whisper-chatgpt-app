@@ -7,7 +7,7 @@ function SideBar({ isSidebarOpen }) {
     <div className={`sidebar ${isSidebarOpen ? "is-open" : ""}`}>
       <div className="sidebar-header">
         <Button variant="link" style={{ color: "#fff" }} className="mt-4">
-          aaa
+          aaadddddddddddddddddddd
         </Button>
         <h3>react-bootstrap sidebar</h3>
       </div>
