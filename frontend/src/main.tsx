@@ -5,12 +5,15 @@ import "./index.scss";
 import AuthProvider from "./context/AuthProvider.tsx";
 import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SetupProvider from "./context/SetupProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <App />
+        <SetupProvider>
+          <App />
+        </SetupProvider>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
